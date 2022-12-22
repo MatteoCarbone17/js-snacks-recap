@@ -30,11 +30,10 @@ createApp({
           
             .then ( (name) => {
                 this.listName.push(name.data.response)
+                console.log(name.data.response)
             })
-        }  
-        }
-        
-    },
+        }},
+      },
     
     created(){
 
