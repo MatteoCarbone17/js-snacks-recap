@@ -18,14 +18,24 @@ createApp({
           listName : [
 
           ],
-          nameUser : ' ',
+          nameUser : ' ', 
+
+          userAccess: false,
 
         }
     },
 
     methods :{
 
-      generatorListName(){
+      checkGuestAccess(nameGuest){
+        this.userAccess = this.listName.includes(nameGuest)
+        console.log(nameGuest)
+      },
+
+      
+    },
+      created(){
+        
         for (let i = 1; i <= 10; i++) {
           axios.get('https://flynn.boolean.careers/exercises/api/random/name')
           
@@ -33,11 +43,7 @@ createApp({
                 this.listName.push(name.data.response)
                 console.log(name.data.response)
             })
-        }},
-      },
-    
-    created(){
-
+        }
       
     
     },
