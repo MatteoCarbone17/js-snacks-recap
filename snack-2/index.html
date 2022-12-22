@@ -13,7 +13,7 @@
 <body>
     <div id="app">
         <main>
-            <input class="mt-3 mb-3" type="text"  v-model="nameUser" @key>
+            <input class="mt-3 mb-3" type="text"  v-model="nameUser" @keyup.enter="generatorListEmail()">
             <ul class="text-center mt-3 mb-3" v-if="(listName.includes(nameUser))">
                 <li class="" v-for="name in listName">
                     {{ name }}

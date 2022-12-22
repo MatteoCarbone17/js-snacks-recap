@@ -18,6 +18,7 @@ createApp({
           listName : [
 
           ],
+          nameUser : ' ',
 
         }
     },
@@ -37,7 +38,7 @@ createApp({
     
     created(){
 
-      this.generatorListName()
+      
     
     },
 
