@@ -28,7 +28,14 @@ createApp({
 
       generatorNumber(){
         axios.get('https://flynn.boolean.careers/exercises/api/random/int')
-        .then((num) => )
+        .then((result) => {
+          const num = result.data.response;
+          if(num % 2 === 0){
+            this.numbersEven.push(num);
+          } else {
+            this.numbersOdd.push(num);
+          }
+        })
         
    
 
@@ -37,9 +44,9 @@ createApp({
     
     created(){
 
-      this.generatorNumber()
+      
     
     },
 
 
-}).mount('#app')
+}}).mount('#app')
