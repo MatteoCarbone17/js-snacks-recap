@@ -27,15 +27,17 @@ createApp({
     methods :{
 
         generatorNumber(){
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 0 ; i <= 10; i++) {
           axios.get('https://flynn.boolean.careers/exercises/api/random/int')
 
             .then ( (num) => {
                 for (let i = 0; i < 10; i++){
-                    if (num % 2 == 0) {
-                      this.numbersEven.push(num)
+                    if (num.data.response % 2 == 0) {
+                      this.numbersEven.push(num.data.response)
+                      console.log(num)
                     } else {
-                      this.numbersOdd.push(num)
+                      this.numbersOdd.push(num.data.response)
+                      console.log(num)
                     }
                   }
                 
