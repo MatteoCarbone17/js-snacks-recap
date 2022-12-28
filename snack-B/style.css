@@ -1,0 +1,25 @@
+main{
+    background-color: rgb(26, 27, 89);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+p{
+    
+    border-radius: 2rem;
+}
+
+input{
+    width: 85%;
+}
+
+p.recevied{
+    background-color: white;
+}
+
+p.sent{
+    background-color: rgb(32, 178, 54);
+    flex-direction: row-reverse;
+}
+
